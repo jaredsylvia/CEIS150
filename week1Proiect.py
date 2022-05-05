@@ -25,9 +25,9 @@ priceList.sort()
 
 print('******\nHello,', fullName, 'The minimum price is', str(minPrice))
 print('There are', str(countVar), 'prices greater than the minimum price.')
-print('The total price is', str(sumVar))
-print('Those prices are:')
+print('The total price is', str(round(sumVar,2)))
+print('Higher prices are:')
 for i in higherPrices:
-    print(i, end= ', ')
+    print(round(i,2), end= ', ')
 print('\n******\nRandomly Generated Price List of numbers between 1 and 100:\n' +
       str(priceList))
