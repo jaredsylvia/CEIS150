@@ -9,12 +9,12 @@ import time
 
 class APIauth: # A fake class that stores information for authenticating against a fake API
     def __init__(self):
-        self.key = 'CN^mn(Cn?j/3g|K'
+        self.key = 'CN^mn(Cn?j/3g|K' # These variables are encapsulated into the class APIAuth and represented as attributes of said class.
         self.secret = 'AZu?8@Z5roI<Grx'
         
-    def genNonce(self):
-        tokenHex = secrets.token_hex(15)
-        return(str(tokenHex) + str(round(time.time())))
+    def genNonce(self): # This is a function that most often returns a unique and incremental number.
+        tokenHex = secrets.token_hex(15) # This variable only exists within this function and cannot be called outside of said function.
+        return(str(round(time.time())) + str(tokenHex))
 
 print('******')
 print('Key encapsulated in class:', APIauth().key)
