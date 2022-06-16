@@ -27,7 +27,7 @@ class NumberIterator:
 apple = Fruit('Apple', 'Red', 'Skin')
 banana = Fruit('Banana', 'Yellow', 'Peel')
 orange = Fruit('Orange', 'Orange', 'Rind')
-
+aListOfNumbers = [3, 8, 24, 51, 0, 563, 83, 562, 12, 5, 28]
 
 
 fruitDict = {'Apple': { 'objectInfo' : vars(apple), 'qty' : 3},
@@ -57,3 +57,8 @@ print('***By two***')
 secondIterLoop = iter(iterByTwo)
 for i in range(0, 8):
     print(vars(next(secondIterLoop)))
+    
+print('***Iterating without creating a specific iter object***')
+for i in aListOfNumbers:
+    print('Number in position {} is {}.'.format(aListOfNumbers.index(i),i))
+    
